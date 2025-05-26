@@ -4,6 +4,9 @@ const sequelize = require('./database');
 
 app.use(express.json());
 
+const Crianca = require('./models/Crianca');
+app.use('/criancas', require('./routes/criancas'));
+
 const Diagnostico = require('./models/Diagnostico');
 app.use('/diagnosticos', require('./routes/diagnosticos'));
 
