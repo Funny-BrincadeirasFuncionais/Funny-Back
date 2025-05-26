@@ -4,11 +4,13 @@ const sequelize = require('./database');
 
 app.use(express.json());
 
-const Diagnostico = require('./models/Diagnostico'); // garante que o modelo seja carregado
+const Diagnostico = require('./models/Diagnostico');
 app.use('/diagnosticos', require('./routes/diagnosticos'));
 
+const Atividade = require('./models/Atividade');
+app.use('/atividades', require('./routes/atividades'));
 
-// Teste de rota
+
 app.get('/', (req, res) => {
   res.send('🚀 API está funcionando!');
 });
@@ -17,8 +19,7 @@ app.get('/', (req, res) => {
 sequelize.authenticate()
   .then(() => {
     console.log('✅ Conexão com o PostgreSQL estabelecida!');
-    // Criar tabelas se não existirem
-    return sequelize.sync(); // por padrão: { force: false }
+    return sequelize.sync();
   })
   .then(() => console.log('📦 Tabelas sincronizadas com sucesso!'))
   .catch(err => console.error('❌ Erro ao conectar ao banco:', err));
