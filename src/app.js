@@ -10,6 +10,9 @@ app.use('/diagnosticos', require('./routes/diagnosticos'));
 const Atividade = require('./models/Atividade');
 app.use('/atividades', require('./routes/atividades'));
 
+const Progresso = require('./models/Progresso');
+app.use('/progresso', require('./routes/progresso'));
+
 
 app.get('/', (req, res) => {
   res.send('🚀 API está funcionando!');
