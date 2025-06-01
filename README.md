@@ -46,3 +46,8 @@ npm run dev
 ---
 
 
+coisas instaladas na criação do sistema de login e senha
+
+npm install bcrypt jsonwebtoken
+
+

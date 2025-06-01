@@ -24,6 +24,11 @@ app.use('/progresso', require('./routes/progresso'));
 
 //ATÉ AQUI PELO AMOR DE DEUS NÃO COLOCA NADA FORA
 
+//sistema de login e senha
+const Usuario = require('./models/Usuario');
+app.use('/auth', require('./routes/auth'));
+
+
 // Teste de rota
 app.get('/', (req, res) => {
   res.send('🚀 API está funcionando!');
