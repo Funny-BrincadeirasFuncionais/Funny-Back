@@ -46,4 +46,13 @@ npm run dev
 ---
 
 
-teste pra ver se foi eu q fiz merda kkkk
+coisas que eu instalei pra o backend (eu deixo isso pra um controle, pra saber oq usar se eu for criar outro serviro)
+
+## instalação de pacote de autenticação
+
+```bash
+npm install bcrypt jsonwebtoken 
+```
+em um novo codespace tem q rodar 
+
+npm install bcrypt

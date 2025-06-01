@@ -19,6 +19,9 @@ app.use('/progresso', require('./routes/progresso'));
 const Responsavel = require('./models/Responsavel');
 app.use('/responsaveis', require('./routes/responsaveis'));
 
+const Usuario = require('./models/Usuario');
+app.use('/auth', require('./routes/auth'));
+
 
 app.get('/', (req, res) => {
   res.send('🚀 API está funcionando!');
