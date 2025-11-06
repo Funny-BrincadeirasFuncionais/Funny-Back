@@ -16,7 +16,3 @@ server.setTimeout(TIMEOUT_MS);
 server.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
-
----
-
-Qualquer um dos dois métodos contém o código correto. Faça o *deploy* para o Vercel e me diga se o teste de validação deu certo!
